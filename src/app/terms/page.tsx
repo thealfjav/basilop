@@ -5,7 +5,7 @@ export default function TermsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-grow container max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <main className="flex-grow container max-w-4xl py-12">
         <h1 className="text-4xl font-bold mb-8 text-center">Terms of Service</h1>
         <div className="prose prose-lg max-w-none text-foreground/80">
           <p>Welcome to ExamenConia! These terms and conditions outline the rules and regulations for the use of ExamenConia's Website, located at examenconia.com.</p>

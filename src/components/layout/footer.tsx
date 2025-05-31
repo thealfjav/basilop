@@ -4,7 +4,7 @@ import { BookOpenCheck } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background">
-      <div className="container max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="container max-w-7xl py-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
             <BookOpenCheck className="h-6 w-6 text-primary" />

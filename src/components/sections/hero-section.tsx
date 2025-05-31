@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/30">
-      <div className="container max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">

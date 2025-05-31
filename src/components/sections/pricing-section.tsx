@@ -66,7 +66,7 @@ const plans: PricingPlan[] = [
 export function PricingSection() {
   return (
     <section id="pricing" className="py-16 sm:py-24 bg-secondary/30">
-      <div className="container max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Simple, Transparent <span className="text-primary">Pricing</span>

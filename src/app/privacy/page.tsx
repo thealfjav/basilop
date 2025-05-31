@@ -5,7 +5,7 @@ export default function PrivacyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-grow container max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <main className="flex-grow container max-w-4xl py-12">
         <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
         <div className="prose prose-lg max-w-none text-foreground/80">
           <p>Your privacy is important to us. It is ExamenConia's policy to respect your privacy regarding any information we may collect from you across our website, examenconia.com, and other sites we own and operate.</p>
