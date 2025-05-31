@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
   keywords: ["AI exam generator", "examenconia.com", "online assessment tool", "create exams with AI", "automated exam creation", "SEO optimized exams"],
   authors: [{ name: "ExamenConia Team" }],
   creator: "ExamenConia Team",
