@@ -8,58 +8,58 @@ interface FaqItem {
 
 const faqItems: FaqItem[] = [
   {
-    question: 'How does ExamenConia\'s AI exam generation work?',
-    answer: 'Our advanced AI analyzes your provided topic, subject matter, and specific requirements (like difficulty level and question types) to generate relevant, diverse, and high-quality exam questions and answers. It can also generate SEO metadata for the exam content.',
-    keywords: 'AI technology, exam creation process, artificial intelligence',
+    question: '¿Cómo funciona la generación de exámenes con IA de ExamenConia?',
+    answer: 'Nuestra IA avanzada analiza el tema o los apuntes proporcionados, la materia y los requisitos específicos (como el nivel de dificultad y los tipos de preguntas) para generar preguntas y respuestas de examen relevantes, diversas y de alta calidad.',
+    keywords: 'tecnología IA, proceso creación exámenes, inteligencia artificial',
   },
   {
-    question: 'Can I customize the exams created by ExamenConia?',
-    answer: 'Absolutely! ExamenConia offers extensive customization options. You can specify subject areas, difficulty levels, question types, number of questions, and even input your own content for the AI to build upon. You can also edit any generated content.',
-    keywords: 'customization, personalized exams, exam settings, edit exams',
+    question: '¿Puedo personalizar los exámenes creados por ExamenConia?',
+    answer: '¡Absolutamente! ExamenConia ofrece amplias opciones de personalización. Puedes especificar áreas temáticas, niveles de dificultad, tipos de preguntas, número de preguntas e incluso ingresar tu propio contenido (apuntes) para que la IA lo desarrolle. También puedes editar cualquier contenido generado.',
+    keywords: 'personalización, exámenes personalizados, configuración exámenes, editar exámenes',
   },
   {
-    question: 'What question types are supported?',
-    answer: 'We support a wide variety of question types, including multiple-choice, true/false, short answer, fill-in-the-blanks, matching, and essay questions. We are continuously working on adding more advanced and interactive question formats.',
-    keywords: 'question formats, multiple choice, true false, short answer',
+    question: '¿Qué tipos de preguntas son compatibles?',
+    answer: 'Admitimos una amplia variedad de tipos de preguntas, incluidas las de opción múltiple, verdadero/falso, respuesta corta, completar espacios en blanco, correspondencia y preguntas de ensayo. Trabajamos continuamente para agregar formatos de preguntas más avanzados e interactivos.',
+    keywords: 'formatos de pregunta, opción múltiple, verdadero falso, respuesta corta',
   },
   {
-    question: 'How does ExamenConia help with SEO for exams?',
-    answer: 'When generating an exam, our AI can also create optimized meta titles, descriptions, and relevant keywords for the exam content. This helps search engines better understand and rank your exam if you choose to publish it online, driving more organic traffic.',
-    keywords: 'SEO optimization, exam visibility, search engine ranking, metadata',
+    question: '¿Cómo puedo generar un examen a partir de mis apuntes?',
+    answer: 'Es muy sencillo. En la interfaz de generación, tendrás una opción para pegar el texto de tus apuntes o subir un documento. Nuestra IA procesará ese contenido y creará preguntas basadas en la información proporcionada.',
+    keywords: 'generar desde apuntes, subir apuntes, IA análisis de texto, crear examen de texto',
   },
   {
-    question: 'Is my data secure with ExamenConia?',
-    answer: 'Yes, data security is a top priority for us. We employ industry-standard security measures, including encryption, to protect your data and ensure confidentiality. Please refer to our Privacy Policy for more details.',
-    keywords: 'data security, privacy, encryption, secure platform',
+    question: '¿Están seguros mis datos y apuntes con ExamenConia?',
+    answer: 'Sí, la seguridad de los datos es una de nuestras principales prioridades. Empleamos medidas de seguridad estándar de la industria, incluido el cifrado, para proteger tus datos y garantizar la confidencialidad. Consulta nuestra Política de Privacidad para obtener más detalles.',
+    keywords: 'seguridad datos, privacidad, cifrado, plataforma segura, protección apuntes',
   },
 ];
 
 export function FaqSection() {
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-secondary/30">
-      <div className="container max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Frequently Asked <span className="text-primary">Questions</span>
-          </h2>
-          <p className="mt-4 text-lg text-foreground/70">
-            Find answers to common questions about ExamenConia.
-          </p>
+      <section id="faq" className="py-16 sm:py-24 bg-secondary/30">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Preguntas <span className="text-primary">Frecuentes</span>
+            </h2>
+            <p className="mt-4 text-lg text-foreground/70">
+              Encuentra respuestas a preguntas comunes sobre ExamenConia y su generador de exámenes con IA.
+            </p>
+          </div>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqItems.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="bg-card p-4 rounded-lg shadow-md">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-medium text-foreground">{item.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pt-2">
+                    <p className="text-foreground/80">{item.answer}</p>
+                    <p className="mt-2 text-xs text-muted-foreground">Palabras clave: {item.keywords}</p>
+                  </AccordionContent>
+                </AccordionItem>
+            ))}
+          </Accordion>
         </div>
-        <Accordion type="single" collapsible className="w-full space-y-4">
-          {faqItems.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-card p-4 rounded-lg shadow-md">
-              <AccordionTrigger className="text-left hover:no-underline">
-                <span className="text-lg font-medium text-foreground">{item.question}</span>
-              </AccordionTrigger>
-              <AccordionContent className="pt-2">
-                <p className="text-foreground/80">{item.answer}</p>
-                <p className="mt-2 text-xs text-muted-foreground">Keywords: {item.keywords}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
+      </section>
   );
 }
